@@ -44,7 +44,7 @@ namespace SyrkinLab3ConsoleServer
                 Socket clientSocket = await AcceptAsync();
                 _ = HandleClientAsync(clientSocket);
             }
-            ////
+            /////
             //byte[] buffer = new byte[1024];
             //int bytesRead = clientSocket.Receive(buffer);
             //string receivedString = Encoding.UTF8.GetString(buffer, 0, bytesRead);
