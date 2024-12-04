@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Net.WebSockets;
 using System.Threading;
+using System.IO;
+using System.Reflection.Metadata;
 
 namespace SyrkinLab3ConsoleServer
 {
     internal class Program
     {
-        static string ipAdress = "127.0.0.1";
+        static string ipAdress = "0.0.0.0";
         static int port = 11223;
 
         static Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         static IPEndPoint endPoint;
 
         static List<Socket> clientSockets = new List<Socket>();
-
-
 
         static string username;
 
@@ -32,6 +32,8 @@ namespace SyrkinLab3ConsoleServer
 
             serverSocket.Bind(endPoint);
             serverSocket.Listen(10);
+
+            File.WriteAllText("../Gay/nogay.txt", "NoGays");
 
             Console.WriteLine("Listening...");
 
