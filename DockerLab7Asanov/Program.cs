@@ -33,7 +33,7 @@ namespace SyrkinLab3ConsoleServer
             serverSocket.Bind(endPoint);
             serverSocket.Listen(10);
 
-            File.WriteAllText("../Gay/nogay.txt", "NoGays");
+            File.WriteAllText("../Yay/TheYay.txt", "Yaaaay");
 
             Console.WriteLine("Listening...");
 
